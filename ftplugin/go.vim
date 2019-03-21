@@ -96,6 +96,7 @@ augroup vim-go-buffer
   endif
 
   autocmd BufWritePre <buffer> call go#auto#fmt_autosave()
+  autocmd BufWritePre <buffer> call go#auto#sqlfmt_autosave()
   autocmd BufWritePost <buffer> call go#auto#metalinter_autosave()
 
   " clear SameIds when the buffer is unloaded so that loading another buffer

@@ -69,6 +69,10 @@ command! -nargs=0 GoFmt call go#fmt#Format(-1)
 command! -nargs=0 GoFmtAutoSaveToggle call go#fmt#ToggleFmtAutoSave()
 command! -nargs=0 GoImports call go#fmt#Format(1)
 
+" -- sqlfmt
+command! -nargs=0 GoSqlFmt call go#sqlfmt#Format()
+command! -nargs=0 GoSqlFmtAutoSaveToggle call go#fmt#ToggleSqlFmtAutoSave()
+
 " -- asmfmt
 command! -nargs=0 GoAsmFmtAutoSaveToggle call go#asmfmt#ToggleAsmFmtAutoSave()
 

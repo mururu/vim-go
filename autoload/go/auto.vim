@@ -59,6 +59,15 @@ function! go#auto#fmt_autosave()
   call go#fmt#Format(-1)
 endfunction
 
+function! go#auto#sqlfmt_autosave()
+  if !go#config#SqlFmtAutosave() || !filereadable(expand('%:p'))
+    return
+  endif
+
+  " Go code formatting on save
+  call go#sqlfmt#Format()
+endfunction
+
 function! go#auto#metalinter_autosave()
   if !go#config#MetalinterAutosave() || !filereadable(expand('%:p'))
     return

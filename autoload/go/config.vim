@@ -284,6 +284,14 @@ function! go#config#SetFmtAutosave(value) abort
   let g:go_fmt_autosave = a:value
 endfunction
 
+function! go#config#SqlFmtAutosave() abort
+	return get(g:, "go_sqlfmt_autosave", 1)
+endfunction
+
+function! go#config#SetSqlFmtAutosave(value) abort
+  let g:go_sqlfmt_autosave = a:value
+endfunction
+
 function! go#config#AsmfmtAutosave() abort
   return get(g:, "go_asmfmt_autosave", 0)
 endfunction
@@ -334,6 +342,14 @@ endfunction
 
 function! go#config#FmtExperimental() abort
   return get(g:, "go_fmt_experimental", 0 )
+endfunction
+
+function! go#config#SqlFmtCommand() abort
+  return get(g:, "go_sqlfmt_command", "sqlfmt")
+endfunction
+
+function! go#config#SqlFmtFailSilently() abort
+  return get(g:, "go_sqlfmt_fail_silently", 0)
 endfunction
 
 function! go#config#PlayOpenBrowser() abort
